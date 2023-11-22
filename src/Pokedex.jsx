@@ -12,7 +12,7 @@ function PokemonCard({ id, imageSrc, name }) {
 
 const defaultPokemon = {
     key: 0,
-    id: '#999',
+    id: 999,
     imageSrc: '/public/pokemon_skeleton.png',
     name: 'Pokémon Name'
 };
@@ -20,7 +20,10 @@ const pokemons = [];
 for (let i = 0; i < 9; i++)
     pokemons.push({...defaultPokemon, key: i})
 
-console.log(pokemons)
+/*
+    TODO : 
+    carré gris absolute pour les cartes
+*/
 
 function Pokedex() {
     return (<>
