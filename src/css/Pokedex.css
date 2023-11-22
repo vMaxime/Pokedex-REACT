@@ -1,10 +1,20 @@
-header {
+header, main {
     display: flex;
+    margin: 0 auto;
+    max-width: 360px;
+    box-sizing: border-box;
+}
+
+header {
     flex-flow: row wrap;
     align-items: center;
     gap: 8px;
-    margin: 0 auto;
-    max-width: 360px;
+    padding: 0 16px;
+}
+
+main {
+    margin-top: 24px;
+    padding: 0 4px;
 }
 
 h1 {
@@ -21,6 +31,7 @@ h1 {
     padding: 0 12px;
     gap: 8px;
     margin-right: 8px;
+    box-sizing: border-box;
 }
 
 .searchBar>input {
@@ -44,4 +55,14 @@ h1 {
 
 .filter:hover {
     cursor: pointer;
+}
+
+.pokemonList {
+    min-height: 524px;
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    background-color: #FFF;
+    border-radius: 8px;
+    width: 100%;
 }

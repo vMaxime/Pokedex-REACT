@@ -20,6 +20,11 @@ function Pokedex() {
             </svg>
         </button>
     </header>
+    <main>
+        <ul className="pokemonList boxShadow-2 inset">
+            
+        </ul>
+    </main>
     </>);
 }
 
