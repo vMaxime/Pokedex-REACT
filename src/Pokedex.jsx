@@ -1,5 +1,27 @@
 import './css/Pokedex.css';
 
+function PokemonCard({ id, imageSrc, name }) {
+    return (
+        <li className="pokemonCard boxShadow-2">
+            <span className="pokemonId caption">#{id}</span>
+            <img className="pokemonImage" src={imageSrc} alt="Pokemon illustration" />
+            <span className="pokemonName text-3">{name}</span>
+        </li>
+    );
+}
+
+const defaultPokemon = {
+    key: 0,
+    id: '#999',
+    imageSrc: '/public/pokemon_skeleton.png',
+    name: 'Pokémon Name'
+};
+const pokemons = [];
+for (let i = 0; i < 9; i++)
+    pokemons.push({...defaultPokemon, key: i})
+
+console.log(pokemons)
+
 function Pokedex() {
     return (<>
     <header>
@@ -22,7 +44,11 @@ function Pokedex() {
     </header>
     <main>
         <ul className="pokemonList boxShadow-2 inset">
-            
+            {
+                pokemons.map(pokemon => 
+                    <PokemonCard key={pokemon.key} id={pokemon.id} imageSrc={pokemon.imageSrc} name={pokemon.name} />
+                )
+            }
         </ul>
     </main>
     </>);

@@ -58,11 +58,38 @@ h1 {
 }
 
 .pokemonList {
-    min-height: 524px;
     display: flex;
     flex-flow: row wrap;
     list-style: none;
     background-color: #FFF;
     border-radius: 8px;
     width: 100%;
+    padding: 24px 12px;
+    gap: 8px;
+}
+
+.pokemonCard {
+    height: 108px;
+    width: 104px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 4px 8px;
+    box-sizing: border-box;
+}
+
+.pokemonCard .pokemonId {
+    color: var(--light);
+    margin-left: auto;
+}
+
+.pokemonCard .pokemonName {
+    color: var(--dark);
+}
+
+.pokemonCard .pokemonImage {
+    height: 72px;
+    width: 72px;
 }
