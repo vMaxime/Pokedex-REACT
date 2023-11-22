@@ -23,6 +23,7 @@ for (let i = 0; i < 9; i++)
 /*
     TODO : 
     carré gris absolute pour les cartes
+    ajusté les svg (rendre en composants)
 */
 
 function Pokedex() {
