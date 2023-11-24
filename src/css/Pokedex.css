@@ -87,9 +87,22 @@ h1 {
 
 .pokemonCard .pokemonName {
     color: var(--dark);
+    z-index: 1;
 }
 
 .pokemonCard .pokemonImage {
     height: 72px;
     width: 72px;
+    z-index: 1;
+}
+
+.pokemonCard .pokemonNameBackground {
+    height: 44px;
+    width: 100%;
+    border-radius: 7px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--background);
+    z-index: 0;
 }
