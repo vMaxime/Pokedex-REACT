@@ -9,6 +9,8 @@ Currently, two official plugins are available:
 
 Template (figma)
 https://www.figma.com/file/F3yULcdk7iMJFlvhUbSs4y/Pok%C3%A9dex-(Community)?type=design&node-id=0-1&mode=design&t=xUeIaTL5u6OZTYGn-0
+Preview (netlify)
+https://main--lighthearted-biscochitos-abd920.netlify.app/
 
 Cette minuscule App React (pour mon apprentissage) est comme son nom l'indique : un Pokedex.
 
