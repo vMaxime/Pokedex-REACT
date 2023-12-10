@@ -1,27 +1,33 @@
-header, main {
+body:has(#pokedex) {
+    background-color: var(--primary);
+    color: #FFF;
+}
+
+header.pokedexTheme, main.pokedexTheme {
     display: flex;
     margin: 0 auto;
     max-width: 360px;
     box-sizing: border-box;
 }
 
-header {
+header.pokedexTheme {
     flex-flow: row wrap;
     align-items: center;
     gap: 8px;
-    padding: 0 16px;
+    padding: 12px 16px 0 16px;
 }
 
-main {
+main.pokedexTheme {
     margin-top: 24px;
+    margin-bottom: 4px;
     padding: 0 4px;
 }
 
-h1 {
+.pokedexTheme h1 {
     margin-left: 8px;
 }
 
-.searchBar {
+.pokedexTheme .searchBar {
     background-color: #FFF;
     border-radius: 16px;
     min-width: 280px;
@@ -34,15 +40,15 @@ h1 {
     box-sizing: border-box;
 }
 
-.searchBar>input {
-    background-color: none;
+.pokedexTheme .searchBar>input {
+    background-color: transparent;
     border: none;
     border-radius: 0;
     outline: 0;
     flex-grow: 1;
 }
 
-.filter {
+.pokedexTheme .filter {
     border: none;
     border-radius: 50%;
     background-color: #FFF;
@@ -53,11 +59,11 @@ h1 {
     align-items: center;
 }
 
-.filter:hover {
+.pokedexTheme .filter:hover {
     cursor: pointer;
 }
 
-.pokemonList {
+.pokedexTheme .pokemonList {
     display: flex;
     flex-flow: row wrap;
     list-style: none;
@@ -66,9 +72,15 @@ h1 {
     width: 100%;
     padding: 24px 12px;
     gap: 8px;
+    max-height: 400px;
+    overflow-y: scroll;
 }
 
-.pokemonCard {
+.pokedexTheme .pokemonList::-webkit-scrollbar {
+    display: none;
+}
+
+.pokedexTheme .pokemonCard {
     height: 108px;
     width: 104px;
     border-radius: 8px;
@@ -80,23 +92,28 @@ h1 {
     box-sizing: border-box;
 }
 
-.pokemonCard .pokemonId {
+.pokedexTheme .pokemonCard:hover {
+    cursor: pointer;
+}
+
+.pokedexTheme .pokemonCard .pokemonId {
     color: var(--light);
     margin-left: auto;
 }
 
-.pokemonCard .pokemonName {
+.pokedexTheme .pokemonCard .pokemonName {
     color: var(--dark);
+    text-transform: capitalize;
     z-index: 1;
 }
 
-.pokemonCard .pokemonImage {
+.pokedexTheme .pokemonCard .pokemonImage {
     height: 72px;
     width: 72px;
     z-index: 1;
 }
 
-.pokemonCard .pokemonNameBackground {
+.pokedexTheme .pokemonCard .pokemonNameBackground {
     height: 44px;
     width: 100%;
     border-radius: 7px;
@@ -105,4 +122,12 @@ h1 {
     left: 0;
     background-color: var(--background);
     z-index: 0;
+}
+
+.pokedexTheme .searchBar:has(input[name="search"]:focus) {
+    box-shadow: var(--shadow-2dp);
+}
+
+.pokedexTheme button.filter:focus {
+    box-shadow: var(--shadow-2dp);
 }

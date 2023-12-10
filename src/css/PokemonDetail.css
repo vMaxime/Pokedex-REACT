@@ -1,0 +1,49 @@
+body:has(#pokemonDetail) {
+    background-color: var(--wireframe);
+    color: #FFF;
+}
+
+header.pokemonDetailTheme, main.pokemonDetailTheme {
+    display: flex;
+    margin: 0 auto;
+    max-width: 360px;
+    box-sizing: border-box;
+}
+
+header.pokemonDetailTheme {
+    align-items: center;
+    padding: 20px 0 24px 0;
+    margin-top: 4px;
+    gap: 8px;
+    position: relative;
+}
+
+header.pokemonDetailTheme .arrowLeft {
+    margin-left: 24px;
+    line-height: .5;
+}
+
+header.pokemonDetailTheme>.pokeBall {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    opacity: .1;
+}
+
+header.pokemonDetailTheme>:not(.pokeBall) {
+    z-index: 1;
+}
+
+header.pokemonDetailTheme>h1 {
+    flex-grow: 1;
+    text-transform: capitalize;
+}
+
+header.pokemonDetailTheme>h2 {
+    margin-right: 20px;
+}
+
+main.pokemonDetailTheme {
+    flex-direction: column;
+}
